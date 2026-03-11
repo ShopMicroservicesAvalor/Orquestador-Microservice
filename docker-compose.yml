@@ -1,0 +1,14 @@
+services:
+  rabbitmq-service:
+    image: rabbitmq:management
+    container_name: rabbitmq-service
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASS}
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+
+networks:
+  default:
+    driver: bridge

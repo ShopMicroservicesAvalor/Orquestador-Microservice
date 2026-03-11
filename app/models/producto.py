@@ -1,4 +1,4 @@
-from app.models.base import Base, TimestampMixin
+from models.base import Base, TimestampMixin
 from sqlalchemy import Column, Integer, String, Float, Boolean
 from sqlalchemy.dialects.postgresql import UUID
 import uuid

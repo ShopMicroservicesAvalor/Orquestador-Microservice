@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     db_password: str
     db_port: int
 
+    # RabbitMQ — ADD THESE
+    rabbitmq_user: str
+    rabbitmq_pass: str
+
     @property
     def database_url(self) -> str:
         return f"postgresql+asyncpg://{self.db_user}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"
